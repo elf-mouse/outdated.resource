@@ -70,24 +70,37 @@ __FF Mobile__         | L1      | N/A         | N/A             | N/A           
 
 需要支持 IE 8 的用户请使用条件注释引入相关的 polyfill。
 
+```html
+﻿<!--[if (gte IE 9)|!(IE)]><!-->
+<script src="//code.jquery.com/jquery-2.x.x.min.js"></script>
+<!--<![endif]-->
+
+<!--[if lt IE 9]>
+<script src="//code.jquery.com/jquery-1.x.x.min.js"></script>
+<script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<script src="//oss.maxcdn.com/rem/1.3.3/rem.min.js"></script>
+<![endif]-->
+```
+
 #### HTML5 新元素
 
 以下任意引入一个即可。
 
-[Modernizr](https://github.com/Modernizr/Modernizr)
-[HTML5 Shiv](https://github.com/aFarkas/html5shiv)
+* [Modernizr](https://github.com/Modernizr/Modernizr)
+* [HTML5 Shiv](https://github.com/aFarkas/html5shiv)
 
 #### Media Query
 
-[Respond.js](https://github.com/scottjehl/Respond)
+* [Respond.js](https://github.com/scottjehl/Respond)
 
 #### rem
 
-[REM unit polyfill](https://github.com/chuckcarpenter/REM-unit-polyfill)
+* [REM unit polyfill](https://github.com/chuckcarpenter/REM-unit-polyfill)
 
 #### `box-sizing`
 
-IE 8 ignores `box-sizing: border-box` if min/max-width/height is used.
+> IE 8 ignores `box-sizing: border-box` if min/max-width/height is used.
 
 #### 伪元素
 
